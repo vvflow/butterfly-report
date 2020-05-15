@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1"><!-- Begin Jekyll SEO tag v2.6.1 -->
+<title>Butterfly wings CFD simulation | Разработка эффективных бессеточных методов численного моделирования движений биологических объектов и квазибиологических роботов в жидкости и воздухе</title>
+<meta name="generator" content="Jekyll v3.8.7" />
+<meta property="og:title" content="Butterfly wings CFD simulation" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="Разработка эффективных бессеточных методов численного моделирования движений биологических объектов и квазибиологических роботов в жидкости и воздухе" />
+<meta property="og:description" content="Разработка эффективных бессеточных методов численного моделирования движений биологических объектов и квазибиологических роботов в жидкости и воздухе" />
+<link rel="canonical" href="http://localhost:4000/butterfly-report/" />
+<meta property="og:url" content="http://localhost:4000/butterfly-report/" />
+<meta property="og:site_name" content="Butterfly wings CFD simulation" />
+<script type="application/ld+json">
+{"@type":"WebSite","headline":"Butterfly wings CFD simulation","url":"http://localhost:4000/butterfly-report/","name":"Butterfly wings CFD simulation","description":"Разработка эффективных бессеточных методов численного моделирования движений биологических объектов и квазибиологических роботов в жидкости и воздухе","@context":"https://schema.org"}</script>
+<!-- End Jekyll SEO tag -->
+<link rel="stylesheet" href="/butterfly-report/assets/main.css"><link type="application/atom+xml" rel="alternate" href="http://localhost:4000/butterfly-report/feed.xml" title="Butterfly wings CFD simulation" /></head>
+<body><header class="site-header" role="banner">
+
+  <div class="wrapper"><a class="site-title" rel="author" href="/butterfly-report/">Butterfly wings CFD simulation</a><nav class="site-nav">
+        <input type="checkbox" id="nav-trigger" class="nav-trigger" />
+        <label for="nav-trigger">
+          <span class="menu-icon">
+            <svg viewBox="0 0 18 15" width="18px" height="15px">
+              <path d="M18,1.484c0,0.82-0.665,1.484-1.484,1.484H1.484C0.665,2.969,0,2.304,0,1.484l0,0C0,0.665,0.665,0,1.484,0 h15.032C17.335,0,18,0.665,18,1.484L18,1.484z M18,7.516C18,8.335,17.335,9,16.516,9H1.484C0.665,9,0,8.335,0,7.516l0,0 c0-0.82,0.665-1.484,1.484-1.484h15.032C17.335,6.031,18,6.696,18,7.516L18,7.516z M18,13.516C18,14.335,17.335,15,16.516,15H1.484 C0.665,15,0,14.335,0,13.516l0,0c0-0.82,0.665-1.483,1.484-1.483h15.032C17.335,12.031,18,12.695,18,13.516L18,13.516z"/>
+            </svg>
+          </span>
+        </label>
+
+        <div class="trigger"></div>
+      </nav></div>
+</header>
+<main class="page-content" aria-label="Content">
+      <div class="wrapper">
+        <article class="post">
+
+  <header class="post-header">
+    <h1 class="post-title"></h1>
+  </header>
+
+  <div class="post-content">
+    <h2 id="simulation-of-butterfly-flapping-with-the-method-of-dipole-domains">Simulation of butterfly flapping with the method of dipole domains</h2>
+
+<h3 id="numerical-method-of-dipole-domains">Numerical method of dipole domains</h3>
+
+<p><img src="/butterfly-report/images/a-1.png" alt="" /></p>
+
+<p>Numerical scheme:</p>
+
+<p><img src="/butterfly-report/images/a-2.png" alt="" /></p>
+
+<p>The dipole particles interaction:</p>
+
+<p><img src="/butterfly-report/images/a-3.png" alt="" /></p>
+
+<h3 id="computing-cycle">Computing cycle</h3>
+
+<ol>
+  <li>Calculation of the dipole moments of the attached particles
+satisfying the boundary conditions <code class="highlighter-rouge">n*V = n*Vs</code>.</li>
+  <li>The calculation of the particles velocity.</li>
+  <li>Calculation of changes in the dipole moments as a result of particles
+interactions</li>
+  <li>Displacement of the particles, including particles at the trailing
+edge</li>
+</ol>
+
+<h3 id="the-force-calculation">The force calculation</h3>
+
+<p><img src="/butterfly-report/images/a-5.1.png" alt="" /></p>
+
+<p><code class="highlighter-rouge">I</code> is the hydrodynamic impulse of the fluid</p>
+
+<p><img src="/butterfly-report/images/a-5.2.png" alt="" /></p>
+
+<h3 id="testing-of-the-method">Testing of the method</h3>
+
+<p>The flow around the thin unmoving plate:</p>
+
+<p><img src="/butterfly-report/images/a-6.png" alt="" /></p>
+
+<h3 id="the-butterfly-model">The butterfly model</h3>
+
+<p><img src="/butterfly-report/images/a-7.png" alt="" /></p>
+
+<iframe width="100%" height="390" src="https://www.youtube.com/embed/RZ1KLWyeErM" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen=""></iframe>
+<p><br /></p>
+
+<p><img src="/butterfly-report/images/a-8.png" alt="" /></p>
+
+<p>Time dependencies of the force coefficients and the angles</p>
+
+<p><img src="/butterfly-report/images/a-9.png" alt="" /></p>
+
+<p>Dependence of the drag force coefficient on the phase shift</p>
+
+<p><img src="/butterfly-report/images/a-10.png" alt="" /></p>
+
+<p>Dependencies of the average values <code class="highlighter-rouge">Cx</code>, <code class="highlighter-rouge">Cy</code> on the attack angle and
+the opening angle</p>
+
+<p><img src="/butterfly-report/images/a-11.png" alt="" /></p>
+
+<h3 id="scheme-of-the-forces-and-accelerations-directions-in-different-oscillation-phase">Scheme of the forces and accelerations directions in different oscillation phase</h3>
+
+<p><img src="/butterfly-report/images/a-12.png" alt="" /></p>
+
+<h3 id="conclusion">Conclusion</h3>
+
+<ul>
+  <li>The mesh-free dipole particles-based methods is developed and applied
+for simulation of the insect flapping wings.</li>
+  <li>It is shown that the main cause of the thrust performance is
+interaction of wings with an added mass of fluid at the wings
+acceleration.</li>
+</ul>
+
+<h3 id="the-wake-behind-the-plate-performing-angular-oscillations">The wake behind the plate performing angular oscillations</h3>
+
+<p><img src="/butterfly-report/images/a-14.png" alt="" /></p>
+
+  </div>
+
+</article>
+
+      </div>
+    </main><footer class="site-footer h-card">
+  <data class="u-url" href="/butterfly-report/"></data>
+
+  <div class="wrapper">
+
+    <h2 class="footer-heading">Butterfly wings CFD simulation</h2>
+
+    <div class="footer-col-wrapper">
+      <div class="footer-col footer-col-1">
+        <ul class="contact-list">
+          <li class="p-name">Butterfly wings CFD simulation</li><li><a class="u-email" href="mailto:yaroslav.dynnikov@gmail.com">yaroslav.dynnikov@gmail.com</a></li></ul>
+      </div>
+
+      <div class="footer-col footer-col-2"><ul class="social-media-list"><li><a href="https://github.com/vvflow"><svg class="svg-icon"><use xlink:href="/butterfly-report/assets/minima-social-icons.svg#github"></use></svg> <span class="username">vvflow</span></a></li></ul>
+</div>
+
+      <div class="footer-col footer-col-3">
+        <p>Разработка эффективных бессеточных методов численного моделирования движений биологических объектов и квазибиологических роботов в жидкости и воздухе</p>
+      </div>
+    </div>
+
+  </div>
+
+</footer>
+</body>
+
+</html>
