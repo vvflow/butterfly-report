@@ -77,3 +77,8 @@ the opening angle
 ### The wake behind the plate performing angular oscillations
 
 ![]({{site.baseurl}}/images/a-14.png)
+
+### Acknowlegment
+
+The work was supported by the Russian Science Foundation
+(grant No. 18-71-00133).
